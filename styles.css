@@ -6,9 +6,11 @@
 #container-menu {
     border: 3px solid green;
     padding: 100px;
+    width: var(--menu-bar-width);
+    height: var(--menu-bar-height);
 }
 
-#menu:hover {
+#container-menu:hover #menu {
     background-color: white;
     transition: 0.1s;
 }
@@ -42,14 +44,15 @@
     bottom: -20px;
 }
 
-#menu:hover::before {
+#container-menu:hover #menu::before {
     top: 0px;
-    transform: rotate(-45deg);
+    transform: rotate(45deg);
     transition: .3s ease-in-out;
 }
-#menu:hover::after {
+
+#container-menu:hover #menu::after {
     bottom: 0px;
-    transform: rotate(45deg);
+    transform: rotate(-45deg);
     transition: .3s ease-in-out;
 }
 
